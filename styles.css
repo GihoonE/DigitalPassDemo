@@ -1,0 +1,84 @@
+
+.log_in_page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #DFDEDF;
+}
+
+.log_in_page .container{
+  width: 90%;
+  max-width: 400px; 
+}
+
+
+.log_in_page h1 {
+  border: 2px solid #5b92e5;
+  background-color: #5b92e5;
+  color: white; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+}
+
+
+.log_in_page img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+.log_in_page fieldset {
+  border: 2px solid black;
+  padding: 20px; 
+  border-radius: 8px;
+}
+
+
+.log_in_page label {
+  display: block;
+  text-align: left; 
+  margin-bottom: 5px; 
+}
+
+.log_in_page input {
+  width: calc(100% - 20px); 
+  padding: 8px; /*increase sizes of buttons*/
+  margin-bottom: 15px;
+  border-radius: 4px; 
+  border: 1px solid #ccc; 
+}
+
+
+.log_in_page button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  background-color: #5b92e5;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+}
+
+.log_in_page button:hover {
+  background-color: #467bc7; 
+}
+
+
+.log_in_page .links {
+  margin-top: 15px;
+}
+
+.log_in_page .links a {
+  display: block;
+  color: #5b92e5;
+}
+
+.log_in_page .links a:hover {
+  text-decoration: underline;
+}
