@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>TSD Profile</title>
+    <title>TSD Residence</title>
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body class="Regular_Visitor_Profile">
-    <div class ="container">
+  <body class="page-container">
+    <header>
       <h1>TSD Residence</h1>
-      <div class="profile">
-        <img src="#">
-      </div>
+      <img src="#" alt="Profile Picture" class="profile-picture">
+    </header>
+
+    <div class="container">
       <div class="personal_information">
-        <ul>
-          <li>Pass Number: </li>
-          <li>Name: </li> <!--link to DB presenting individuals' informations-->
-        </ul>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <ul>
+            <li><span class="form-label">Pass Number:</span> </li>
+            <li><span class="form-label">Name:</span> </li> <!-- Link to DB presenting individual's information -->
+          </ul>
+        </fieldset>
       </div>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&size=100x100" alt="QR Code">
+
+      <div class="qr-code-section">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&size=100x100" alt="QR Code" class="qr-code">
+      </div>
+
       <table id="user-record-table">
         <caption>Recent Entry/Exit Information</caption>
         <thead>
@@ -27,14 +35,33 @@
             <th rowspan="2">Name</th>
             <th rowspan="2">Purpose of Entry/Exit</th>
             <th rowspan="2">Destination</th>
-            <th colspan="2">Time of Entry&Exit</th>
+            <th colspan="2">Time of Entry & Exit</th>
           </tr>
           <tr>
             <th>Entry Time</th>
             <th>Exit Time</th>
           </tr>
         </thead>
+        
+        <tbody>
+          <tr>
+            <td>Unit B</td>
+            <td>Captain</td>
+            <td>Jane Smith</td>
+            <td>Meeting</td>
+            <td>Headquarters</td>
+            <td>08:30 AM</td>
+            <td>10:15 AM</td>
+          </tr>
+        </tbody>
+        -
       </table>
+      <div class="links">
+        <!--
+        <a href="/edit-profile.html">Requesting Addition of Familiy Members</a>
+        -->
+      </div>
+
     </div>
   </body>
 </html>
