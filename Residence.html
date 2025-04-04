@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>TSD Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="Regular_Visitor_Profile">
+    <div class ="container">
+      <h1>TSD Residence</h1>
+      <div class="profile">
+        <img src="#">
+      </div>
+      <div class="personal_information">
+        <ul>
+          <li>Pass Number: </li>
+          <li>Name: </li> <!--link to DB presenting individuals' informations-->
+        </ul>
+      </div>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&size=100x100" alt="QR Code">
+      <table id="user-record-table">
+        <caption>Recent Entry/Exit Information</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Affiliation</th>
+            <th rowspan="2">Rank</th>
+            <th rowspan="2">Name</th>
+            <th rowspan="2">Purpose of Entry/Exit</th>
+            <th rowspan="2">Destination</th>
+            <th colspan="2">Time of Entry&Exit</th>
+          </tr>
+          <tr>
+            <th>Entry Time</th>
+            <th>Exit Time</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>
