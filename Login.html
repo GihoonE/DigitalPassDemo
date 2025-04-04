@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <title>JSA Digital Pass Demo</title>
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body class="log_in_page">
-    <div class ="container">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSA Digital Pass Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <header>
       <h1>Joint Security Area Digital Pass</h1>
       <img src="https://www.unc.mil/portals/46/Images/UNC%20logos/150JSA-DiamondPatch-AllWhite-transBGRD-UNCLAS.PNG?ver=2020-01-29-235149-703" alt="JSA Logo">
-      <fieldset>
-        <legend>Sign In</legend>
-        <label for="user_id">ID:</label>
-        <input type="text" id="user_id" placeholder="Please Type Your ID">
-        <label for="user_pw">Password:</label>
-        <input type="password" id="user_pw" placeholder="Please Type Your Password">
-        <button type="submit">Sign In</button>
-      </fieldset>
+    </header>
+    <main>
+      <form class="form-container">
+        <fieldset>
+          <legend>Sign In</legend>
+          <label for="user_id" class="form-label">ID:</label>
+          <input type="text" id="user_id" name="user_id" class="form-input" placeholder="Please type your ID">
+          <label for="user_pw" class="form-label">Password:</label>
+          <input type="text" id="user_pw" name="user_pw" class="form-input" placeholder="Please type your Password">
+          <button type="submit" class="form-button">Log In</button>
+        </fieldset>
+      </form>
       <div class="links">
         <a href="#">Forgot ID/Password?</a>
         <a href="#">Sign Up</a>
       </div>
-    </div>
-  </body>
+    </main>
+    <footer>
+      <p>&copy; 2025 Digital Pass System</p>
+    </footer>
+  </div>
+</body>
 </html>
