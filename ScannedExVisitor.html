@@ -5,22 +5,31 @@
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body class="Regular_Visitor_Profile">
-    <div class ="container">
+  <body class="page-container">
+
+    <header>
       <h1>External Visitor Residence</h1>
-      <div class="profile">
-        <img src="#">
-      </div>
+      <img src="#" alt="Profile Picture" class="profile-picture">
+    </header>
+
+
+    <div class="container">
+
       <div class="personal_information">
-        <ul>
-          <li>Name: </li> <!--link to DB presenting individuals' informations-->
-          <li>Purpose of Visit: </li>
-          <li>Contact: </li>
-          <li>Validation Date: </li>
-        </ul>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <ul>
+            <li><span class="form-label">Name:</span> </li> <!-- Link to DB presenting individual's information -->
+            <li><span class="form-label">Purpose of Visit:</span> </li>
+            <li><span class="form-label">Contact:</span> </li>
+            <li><span class="form-label">Validation Date:</span> </li>
+          </ul>
+        </fieldset>
       </div>
-      <div>
-        <p>Pass Number: </p> <!-- After Scanning the number that guard typed will show up -->
+
+
+      <div class="pass-number-section">
+        <p><span class="form-label">Pass Number:</span> </p> <!-- After scanning, the number typed by the guard will show up -->
         <p>Please don't forget to take your ID when you leave.</p>
       </div>
     </div>
