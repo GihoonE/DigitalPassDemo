@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    if (typeof Html5Qrcode === "undefined") {
+        console.error("Html5Qrcode 라이브러리가 로드되지 않았습니다.");
+        return;
+    }
     const qrReader = new Html5Qrcode("qr-reader");
     const resultElement = document.getElementById("qr-result");
     const errorElement = document.getElementById("qr-error");
@@ -7,9 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const slideUpPanel = document.getElementById("slide-up-panel");
     const panelResult = document.getElementById("panel-result");
     const closePanelButton = document.getElementById("close-panel");
+    const simulateScanButton = document.getElementById("simulate-scan");
 
     // 성공 콜백 함수
     const onScanSuccess = (decodedText) => {
+        showScanResult(decodedText);
+    };
+
+    // 스캔 결과 표시 함수
+    const showScanResult = (decodedText) => {
         resultElement.innerText = `스캔 결과: ${decodedText}`;
         console.log(`Decoded Text: ${decodedText}`);
         
@@ -17,7 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
         panelResult.innerText = decodedText;
 
         // 슬라이드 패널 활성화
+        const slideUpPanel = document.getElementById("slide-up-panel");
         slideUpPanel.classList.add("active");
+        console.log("왜 화면이 안올라와 진짜")
+        console.log(slideUpPanel.classList);
 
         // 스캔 성공 후 카메라 종료 (선택적)
         qrReader.stop().catch(console.error);
@@ -35,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { 
                 fps: 10,
                 qrbox: { width: 250, height: 250 },
-                rememberLastUsedCamera: true // 사용자 카메라 선호도 기억
+                rememberLastUsedCamera: true
             },
             onScanSuccess,
             onScanError
@@ -60,5 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // 닫기 버튼 클릭 시 슬라이드 패널 숨김
     closePanelButton.addEventListener("click", () => {
         slideUpPanel.classList.remove("active");
+    });
+
+    // 시뮬레이션 버튼 클릭 이벤트
+    simulateScanButton.addEventListener("click", () => {
+        showScanResult("시뮬레이션된 QR 코드 데이터");
     });
 });
