@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scan Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.4.2/html5-qrcode.min.js"></script>
+    <script src="qrScanner.js" defer></script>
+  </head>
+  <body class="page-container">
+    <header>
+      <h1>QR Code Scanner</h1>
+    </header>
+    <div class="qr-scan-container">
+      <div id="qr-reader" style="width: 300px; margin: auto;"></div>
+      <p id="qr-result" style="text-align: center; margin-top: 20px;">Scan Results: Nothing</p>
+    </div>
+    <!--Call QR Scanner -->
+    <div id="qr-reader-container">
+      <div id="qr-reader" style="width: 300px; height: 300px;"></div>
+      <p id="qr-result" style="text-align: center; margin-top: 20px;">Scan Results: Nothing</p>
+      <p id="qr-error" style="color: red; text-align: center;"></p>
+    </div>
+    </script>
+  </body>
+</html>
