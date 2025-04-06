@@ -6,7 +6,8 @@
     <title>QR 코드 스캔</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.4.2/html5-qrcode.min.js"></script>
-    <script src="qrScanner.js" defer></script>
+    <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body class="page-container">
   <header>
@@ -18,7 +19,8 @@
       <p id="qr-result" style="text-align:center; margin-top:20px;">스캔 결과: 없음</p>
       <p id="qr-error" style="color:red; text-align:center;"></p>
   </div>
-  
+  <button id="simulate-scan" style="margin-top: 20px;">스캔 시뮬레이션</button>
+
   <!-- 하단 슬라이드 창 -->
   <div id="slide-up-panel" class="hidden">
       <div class="panel-header">
@@ -26,7 +28,27 @@
           <button id="close-panel" class="close-button">닫기</button>
       </div>
       <div class="panel-content">
-          <p id="panel-result">스캔된 QR 코드 데이터</p>
+          <p id="panel-result">스캔된 QR 코드 데이터가 여기에 표시됩니다.</p>
+          <ul>
+            <li><button type="submit">"출근"</button></li>
+            <li><button type="submit">"외출복귀"</button></li>
+            <li><button type="submit">"외박복귀"</button></li>
+            <li><button type="submit">"휴가복귀"</button></li>
+            <li><button type="submit">"업무복귀"</button></li>
+            <!-- 
+            나가는 경우
+            <li><button type="submit">"퇴근"</button></li>
+            <li><button type="submit">"외출"</button></li>
+            <li><button type="submit">"외박출발"</button></li>
+            <li><button type="submit">"휴가출발"</button></li>
+            <li><button type="submit">"업무"</button></li>
+            
+            공무의 경우
+            -->
+            <form>
+              <input type="number" placeholder="숫자를 입력하세요">
+            </form>
+          </ul>
       </div>
   </div>
 
