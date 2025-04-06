@@ -162,7 +162,7 @@ tr:nth-child(odd) {
 }
 
 .panel-header h2 {
-  margin: 0;
+  bottom: 0;
 }
 
 .close-button {
