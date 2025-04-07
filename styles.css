@@ -31,6 +31,23 @@
   margin: auto;
 }
 
+.menu-container {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.menu-button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: none;
+  margin-top: 10px;
+}
+
 img{
   width: 50%;
   height: auto;
@@ -62,8 +79,24 @@ img{
   border: none;
 }
 
-.form-button:hover {
+.log-out-button {
+  width: calc(40% - 20px);
+  padding: 10px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: none;
+}
+
+.form-button:hover, .menu-button:hover {
   background-color: var(--hover-color);
+}
+
+.log-out-button:hover{
+  background-color: white;
+  color:black;
 }
 
 .links {
