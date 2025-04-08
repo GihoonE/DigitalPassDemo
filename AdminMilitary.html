@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry/Exit Record Page - Military Personnel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1 style="width:90vw">Entry/Exit Record Page - <span style="color: var(--primary-color)">Military Personnel</span></h1>
+    </header>
+    <main>
+      <div class="admin-container">
+      <!-- Admin Links -->
+        <div class="admin-links">
+          <button type="submit" disabled><strong>Military Personnel Log</strong></button>
+          <button type="submit"><strong>Visitor Log</strong></button>
+        </div>
+
+      <!-- Search Box -->
+        <div class="search-box">
+          <form>
+          <fieldset>
+          <legend>Search Name</legend>
+            <div class="name-form">
+            <label for="name">Name: <input type="text" id="name" class="name"></label>
+            <button type="submit">Search</button>
+            <button type="button" id="cancel-button">Cancel</button>
+            </div>
+        </div>
+        <script>
+          document.getElementById("cancel-button").addEventListener("click", function () {
+            const tar = document.getElementById("name")
+            tar.value = "";
+            tar.focus();
+          });
+        </script>
+      <!-- Log Table -->
+        <div class="log-table">
+          <table id="user-record-table">
+            <caption>Today Entry/Exit Information</caption>
+            <thead>
+              <tr>
+                <th rowspan="2">Affiliation</th>
+                <th rowspan="2">Rank</th>
+                <th rowspan="2">Name</th>
+                <th rowspan="2">Purpose of Entry/Exit</th>
+                <th rowspan="2">Destination</th>
+                <th colspan="2">Time of Entry & Exit</th>
+              </tr>
+              <tr>
+                <th>Entry Time</th>
+                <th>Exit Time</th>
+              </tr>
+            </thead>
+            <!-- Example row -->
+            <tbody>
+              <tr>
+                <td>Unit A</td>
+                <td>Major</td>
+                <td>Jane Doe</td>
+                <td>Inspection</td>
+                <td>Main Facility</td>
+                <td>09:00 AM</td>
+                <td>11:00 AM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="links">
+      <p>&copy; 2025 Digital Pass System. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
